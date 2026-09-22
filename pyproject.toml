@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "django-oauth-usp-authz"
+version = "0.1.0"
+description = "Controle de acesso por lista de usuários autorizados para django-oauth-usp."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "django>=4.2",
+    "django-oauth-usp",
+]
+
+[project.urls]
+Repository = "https://github.com/usp/django-oauth-usp-authz"
+
+[tool.setuptools.packages.find]
+include = ["django_oauth_usp_authz*"]
+
+[tool.setuptools.package-data]
+django_oauth_usp_authz = [
+    "migrations/*.py",
+]
